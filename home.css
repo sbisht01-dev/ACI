@@ -1,7 +1,6 @@
 * {
     padding: 0;
     margin: 0;
-    background-color: bl;
 }
 
 :root {
@@ -12,11 +11,26 @@
     --semibold: 600;
     --medium: 500;
     --regular: 400;
+    --Fblack: rgb(26, 26, 26);
+    --Fwhite: white;
+    --height: 60px;
 }
 
 .primary-container {
-    height: 5000px;
-    overflow-y: hidden;
+    overflow: hidden;
+    z-index: 500;
+}
+
+header {
+    position: fixed;
+    min-height: var(--height);
+    height: auto;
+    width: 100%;
+    z-index: 400;
+    top: 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
 }
 
 nav ul {
@@ -33,12 +47,19 @@ a {
     font-size: 1.2rem;
     font-weight: 900;
     text-decoration: none;
-    color: #f5f5f5;
+    color: var(--Fblack);
     position: relative;
     margin-left: 5vw;
     padding: 0 10px;
     padding-top: 15px;
     letter-spacing: 0.5px;
+    transition: 0.5s ease-in-out;
+}
+
+a:hover{
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
 }
 
 a::after{
@@ -56,17 +77,6 @@ a:hover::after {
     width: 100%;
     left: 0;
     transition: 0.3s;
-
-}
-
-header {
-    height: 70px;
-    width: 100%;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: space-around;
 }
 
 ul {
@@ -74,17 +84,33 @@ ul {
     justify-content: center;
 }
 
-.bg-video {
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
+#sub_list{
+    background-color:#f9fffa;
+    color:#2e852e;
+    width: auto;
+    left: 0;
+    position: absolute;
+    visibility: hidden;
+    font-size: 1rem;
+    top: 55px;
+}
+
+#what:hover ul#sub_list{
+    visibility: visible;
+    width: 250px;
+    display: block;
+    padding: 20px;
+}
+
+#sub_list a{
+    padding: 0.3rem;
 }
 
 .contact>button {
     font-size: 1rem;
     font-weight: 800;
-    color: white;
-    background-color: black;
+    color: var(--Fwhite);
+    background-color: rgba(0, 0, 0, 0);
     position: relative;
     z-index: 200;
     width: 150px;
@@ -93,12 +119,21 @@ ul {
     border: solid 1px;
     border-radius: 50px;
     transition: 0.3s ease-in-out;
+    background-image: linear-gradient(45deg, #85a363, #2e852e);
+    border-color: #97DB4F;
 }
 
 .contact>button:hover {
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
     z-index: 200;
-    border-color: #97DB4F;
-    background-image: linear-gradient(45deg, #709b3f, #153D15);
+    width: 170px;
+    color: var(--Fblack);
+    background-image: none;
     filter: drop-shadow(0px 4px 15px rgba(151, 219, 79, 0.5));
+}
+
+.hero-section{
+    margin-top: var(--height);
+    background-color: rgb(199, 89, 89);
+    height: 80vh;
 }
