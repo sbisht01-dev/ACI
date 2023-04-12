@@ -1,16 +1,16 @@
+//***********window on load is used because the script is executes before DOM is fully loaded
+//***********that's why it returns null
+window.onload = function () {
+  var navbar = document.getElementById("header"); // Get the navbar element
+  var triggerHeight = 50; // Height at which the color change will be triggered
 
-//***********window on load is used because the script is executes before DOM is fully loaded 
-//***********that's why it returns null 
-window.onload = function(){
-    document.querySelector(".logo").addEventListener("mouseover",function(){
-        
-       var el =  document.getElementsByClassName("logo")
-       el.remove()
-    })
-}
+  window.addEventListener("scroll", function () {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Get the scroll position
 
-
-function remove(){
-    var element = document.getElementsByClassName("logo");
-    element.remove();
-}
+    if (scrollTop > triggerHeight) {
+      navbar.classList.add("scroll"); // Add "scroll" class to navbar when scrolled past triggerHeight
+    } else {
+      navbar.classList.remove("scroll"); // Remove "scroll" class from navbar when scrolled back above triggerHeight
+    }
+  });
+};
