@@ -18,7 +18,7 @@
 }
 
 body {
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -26,7 +26,8 @@ body::-webkit-scrollbar {
 }
 
 .primary-container {
-    height: 90vh;
+    
+    height: 100vh;
     width: auto;
     background-image: url("rsrc/forest-1867975_1920.jpg");
     background-size: cover;
