@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,21 +11,80 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <title>Our Services</title>
-    <link rel="stylesheet" href="os.css">
+    <link rel="stylesheet" href="secondary.css">
     <script src="aqi.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
 </head>
+
 <body>
+    <header id="header">
+        <div id="logo"> <img src="rsrc/newlogo.png"> </div>
+        <nav class="navigation-link">
+            <ul>
+                <a class="links" id="home" href="index.html">
+                    <li>HOME</li>
+                </a>
+                <a class="links" id="what" href="os.html">
+                    <li> OUR SERVICES</li>
+                </a>
+                <a class="links" id="get" href="ge.html">
+                    <li>GET ENVOLVED</li>
+                </a>
+                <a class="links" id="about" href="about.html">
+                    <li>ABOUT</li>
+                </a>
+            </ul>
+        </nav>
+
+        <div class="contact">
+            <a href="">
+                <button>CONTACT US</button>
+            </a>
+        </div>
+
+    </header>
+
     <div class="secondary-container">
-        <div class="fade">
+
             <div class="start-info">
                 <p>Let's Visualise the Past</p>
                 <!-- <p>Explore the past to uncover the rise of poor air quality and global temperature. Analyze historical data, visualize trends, and understand the variables at play.</p> -->
-                
-                    <span class="text" id="typing-textt"></span>
-                
-            </div> 
-        </div>
+                <span class="textSc" id="typing-textt"></span>
+            </div>
+            <!-- <p></p> -->
+
+            <div id="chartOne" class="chartCenter">
+                <div class="canvas-chart aqi" id="aqiChart">
+                    <canvas id="chart"></canvas>
+                </div>
+                <div class="infotext">
+                    <span id="aqiInfo">
+
+                    </span>
+                    <div class="buttons">
+                        <button class="aqi-button" id="five">2015</button>
+                        <button class="aqi-button" id="twenty">2020</button>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="vContainer">
+                <div class="infoV">
+                    <span id="vehicleInfo">
+                        This is vehicle info This is vehicle info This is vehicle info This is vehicle info This is vehicle info This is vehicle info  This is vehicle info This is vehicle info This is vehicle infoThis is vehicle info 
+                    </span>
+                    <button class="aqi-button" id="vehicle-button">Vehicle</button>
+                </div>
+                <div class="vehicle-chart">
+                    <canvas id="vehicle">
+
+                    </canvas>
+                </div>
+            </div>
     </div>
-    
+
 </body>
+
 </html>

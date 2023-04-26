@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 2000px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+#header {
+    background-color: #3b3b3b;
+    position: fixed;
+    min-height: var(--height);
+    max-height: 50px;
+    height: auto;
+    width: 100%;
+    z-index: 300;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#header.scroll {
+    backdrop-filter: blur(50px);
+    background-color: rgba(8, 25, 7, 0.4);
+}
+
+nav ul {
+    list-style: none;
+    align-items: center;
+}
+
+#logo>img {
+    margin: 10px;
+    height: 60px;
+    width: auto;
+}
+
+ul a {
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--Fwhite);
+    position: relative;
+    margin-left: 5vw;
+    padding: 0 10px;
+    padding-top: 15px;
+    transition: 0.5s ease-in-out;
+}
+
+ul a:hover {
+    font-size: 1rem;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+}
+
+ul a::after {
+    content: "";
+    position: absolute;
+    background-color: #97DB4F;
+    height: 3px;
+    width: 0;
+    transition: 0.3s ease-in-out;
+}
+
+ul a:hover::after {
+    content: "";
+    position: absolute;
+    background-color: #97DB4F;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    transition: 0.3s ease-in-out;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+}
+
+#home {
+    color: #97DB4F;
+}
+
+.contact>a>button {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #97DB4F;
+    position: relative;
+    z-index: 300;
+    width: 150px;
+    height: 35px;
+    top: 10px;
+    border: solid 1px;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+    background-color: rgba(255, 255, 255, 0);
+    border-color: #97DB4F;
+}
+
+.contact>a>button:hover {
+    color: white;
+    border: solid 3px;
+    border-style: double;
+    background-image: none;
+    transition: 0.3s ease-in-out;
+}
+
+.headlines-top {
+    position: relative;
+    top: 60px;
+    display: grid;
+    height: 60vh;
+}
+
+.one{
+    background-color: red;
+    
+}
+
+.two{
+    background-color: blue;
+}
+
+.three{
+    background-color: green;
+}
+
+.four{
+    background-color: yellow;
+}

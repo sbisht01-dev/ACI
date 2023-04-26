@@ -41,7 +41,7 @@ window.onload = function () {
   let cta = document.querySelector(".CTA");
   cta.addEventListener("mouseenter", () => {
     // addition typing class enter + the text
-    console.log();
+    // console.log();
     let emission = document.querySelector(".emission");
     emission.style.fontSize = "1rem ";
     emission.style.fontWeight = "500";
@@ -60,4 +60,10 @@ window.onload = function () {
     }
     setTimeout(remove, 100);
   });
+
+
+
+
+
+
 };
