@@ -27,8 +27,8 @@
                 <a class="links" id="what" href="os.html">
                     <li> OUR SERVICES</li>
                 </a>
-                <a class="links" id="get" href="ge.html">
-                    <li>GET ENVOLVED</li>
+                <a class="links" id="read" href="read.html">
+                    <li>Read</li>
                 </a>
                 <a class="links" id="about" href="about.html">
                     <li>ABOUT</li>
@@ -46,43 +46,52 @@
 
     <div class="secondary-container">
 
-            <div class="start-info">
-                <p>Let's Visualise the Past</p>
-                <!-- <p>Explore the past to uncover the rise of poor air quality and global temperature. Analyze historical data, visualize trends, and understand the variables at play.</p> -->
-                <span class="textSc" id="typing-textt"></span>
+        <div class="start-info">
+            <p>Let's Visualise the Past</p>
+            <!-- <p>Explore the past to uncover the rise of poor air quality and global temperature. Analyze historical data, visualize trends, and understand the variables at play.</p> -->
+            <span class="textSc" id="typing-textt"></span>
+        </div>
+        <!-- <p></p> -->
+
+        <div id="chartOne" class="chartCenter">
+            <div class="canvas-chart aqi" id="aqiChart">
+                <canvas id="chart"></canvas>
             </div>
-            <!-- <p></p> -->
+            <div class="infotext">
+                <span id="aqiInfo">
 
-            <div id="chartOne" class="chartCenter">
-                <div class="canvas-chart aqi" id="aqiChart">
-                    <canvas id="chart"></canvas>
-                </div>
-                <div class="infotext">
-                    <span id="aqiInfo">
-
-                    </span>
-                    <div class="buttons">
-                        <button class="aqi-button" id="five">2015</button>
-                        <button class="aqi-button" id="twenty">2020</button>
-                    </div>
-                </div>
-            </div>
-
-            <br><br>
-
-            <div class="vContainer">
-                <div class="infoV">
-                    <span id="vehicleInfo">
-                        This is vehicle info This is vehicle info This is vehicle info This is vehicle info This is vehicle info This is vehicle info  This is vehicle info This is vehicle info This is vehicle infoThis is vehicle info 
-                    </span>
-                    <button class="aqi-button" id="vehicle-button">Vehicle</button>
-                </div>
-                <div class="vehicle-chart">
-                    <canvas id="vehicle">
-
-                    </canvas>
+                </span>
+                <div class="buttons">
+                    <button class="aqi-button" id="five">2015</button>
+                    <button class="aqi-button" id="twenty">2020</button>
                 </div>
             </div>
+        </div>
+
+        <br><br>
+
+        <div class="vContainer">
+            <div class="infoV">
+                <span id="vehicleInfo">
+                    Over the past few decades, there has been a dramatic increase in the number of vehicles on the road,
+                    both in developed and developing countries. In the 1980s, there were around 500 million cars in the
+                    world, while today there are more than 1.2 billion cars on the road. This growth is driven by
+                    factors such as rising incomes, urbanization, and improvements in transportation infrastructure.
+                    <br>
+                    The increase in the number of vehicles has brought with it a range of environmental and social
+                    challenges. One of the most significant challenges is air pollution, as the emissions from vehicles
+                    are a major source of harmful pollutants such as nitrogen oxide and particulate matter. This
+                    pollution can have significant impacts on public health, contributing to respiratory and
+                    cardiovascular problems, and even premature death in some cases.
+                </span>
+                <button class="aqi-button" id="vehicle-button">Vehicle</button>
+            </div>
+            <div class="vehicle-chart">
+                <canvas id="vehicle">
+
+                </canvas>
+            </div>
+        </div>
     </div>
 
 </body>

@@ -1,52 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Just a Click Away</title>
-    <script src="read.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <link rel="stylesheet" href="read.css">
-
 </head>
+
 <body>
-    <div class="front">
-        <header id="header">
-            <div id="logo"> <img src="rsrc/newlogo.png"> </div>
-            <nav class="navigation-link">
-                <ul>
-                    <a class="links" id="home" href="index.html">
-                        <li>HOME</li>
-                    </a>
-                    <a class="links" id="what" href="os.html">
-                        <li> OUR SERVICES</li>
-                    </a>
-                    <a class="links" id="get" href="ge.html">
-                        <li>GET ENVOLVED</li>
-                    </a>
-                    <a class="links" id="about" href="about.html">
-                        <li>ABOUT</li>
-                    </a>
-                </ul>
-            </nav>
-
-            <div class="contact">
-                <a href="">
-                    <button>CONTACT US</button>
+    <script src="read.js" type="module"></script>
+    <header id="header">
+        <div id="logo"> <img src="rsrc/newlogo.png"> </div>
+        <nav class="navigation-link">
+            <ul>
+                <a class="links" id="home" href="index.html">
+                    <li>HOME</li>
                 </a>
-            </div>
-
-        </header>
-
-        <div class="headlines-top">
-            <div class="one"></div>
-            <div class="two"></div>
-            <div class="three"></div>
-            <div class="four"></div>
-
+                <a class="links" id="what" href="os.html">
+                    <li> OUR SERVICES</li>
+                </a>
+                <a class="links" id="read" href="read.html">
+                    <li>READ</li>
+                </a>
+                <a class="links" id="about" href="about.html">
+                    <li>ABOUT</li>
+                </a>
+            </ul>
+        </nav>
+        <div class="contact">
+            <a href="">
+                <button>CONTACT US</button>
+            </a>
         </div>
-    </div>
+    </header>
+    <div class="articles">
 
-    
+        <div class="newshead" id="one">
+            <div class="title" id="oneTitle"></div>
+            <div class="article" id="oneArticle"></div>
+        </div>
+
+        <div class="newshead" id="two">
+            <div class="title" id="twoTitle"></div>
+            <div class="article" id="twoArticle"></div>
+        </div>
+
+        <div class="newshead" id="three">
+            <div class="title" id="threeTitle"></div>
+            <div class="article" id="threeArticle"></div>
+        </div>
+
+        <div class="newshead span-4" id="four">
+            <div class="title" id="fourTitle"></div>
+            <div class="article" id="fourArticle"></div>
+        </div>
+
+        <div class="newshead span-4" id="five">
+            <div class="title" id="fiveTitle"></div>
+            <div class="article" id="fiveArticle"></div>
+        </div>
+
+        <div class="newshead span-4" id="six">
+            <div class="title" id="sixTitle"></div>
+            <div class="article" id="sixArticle"></div>
+        </div>
+
+        <div class="newshead span-4" id="seven">
+            <div class="title" id="sevenTitle"></div>
+            <div class="article" id="sevenArticle"></div>
+        </div>
+
+        <div class="newshead span-4" id=" eight">
+            <div class="title" id="eightTitle"></div>
+            <div class="article" id="eightArticle"></div>
+        </div>
+
+        <div class="newshead span-4" id="nine">
+            <div class="title" id="nineTitle"></div>
+            <div class="article" id="nineArticle"></div>
+        </div>
+
+        <div class="newshead span-4" id="ten">
+            <div class="title" id="tenTitle"></div>
+            <div class="article" id="tenArticle"></div>
+        </div>
+
+    </div>
 </body>
+
 </html>

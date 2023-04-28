@@ -60,10 +60,4 @@ window.onload = function () {
     }
     setTimeout(remove, 100);
   });
-
-
-
-
-
-
 };

@@ -11,9 +11,9 @@ window.onload = function () {
   let xV = [];
   let yV = [];
   let k = 10;
-  let auto = 1
+  let auto = 1;
 
-  chartt(lt)
+  chartt(lt);
   var navbar = document.getElementById("header"); // Get the navbar element
   var triggerHeight = 50; // Height at which the color change will be triggered
 
@@ -54,34 +54,31 @@ window.onload = function () {
     "The concentration of carbon dioxide in the atmosphere has increased about 50% since the pre-industrial era, primarily due to human activities."; // Text to be typed // Define the text to be typed
   type(myText); // Call the type() function and pass the text as an argument
 
-  // document.querySelector("#all").addEventListener("click", () => {
-  //   lt = "DELHIAQI";
-  //   chartt(lt);
-  // });
   document.querySelector("#five").addEventListener("click", () => {
     lt = "DELHI2015AQI";
     addFlex();
     let text = document.querySelector(".start-info");
     text.classList.add("hidden");
-    auto = 0
-    let aqiInfo = document.getElementById("aqiInfo")
-    const info = "The high level of air pollution in Delhi during 2015, as indicated by the average AQI of about 307, poses significant health risks for the city's residents. Exposure to such hazardous air quality can cause a range of respiratory and cardiovascular problems, including asthma, lung cancer, and heart disease.In addition, prolonged exposure to high levels of air pollution can have long-term effects on the environment, such as increased greenhouse gas emissions and reduced biodiversity. It is essential for policymakers, industries, and individuals to take steps to reduce air pollution levels in Delhi and other polluted cities worldwide to mitigate the adverse effects of air pollution on public health and the environment. This may include measures such as promoting cleaner energy sources, reducing vehicular emissions, and improving waste management practices."
-    chartt(lt,info);
-  })
-  // document.querySelector("#eight").addEventListener("click", () => {
-  //   lt = "DELHI2018AQI";
-  //   chartt(lt);
-  // });
+    auto = 0;
+    let aqiInfo = document.getElementById("aqiInfo");
+    let info =
+      "The high level of air pollution in Delhi during 2015, as indicated by the average AQI of about 307, poses significant health risks for the city's residents. Exposure to such hazardous air quality can cause a range of respiratory and cardiovascular problems, including asthma, lung cancer, and heart disease.In addition, prolonged exposure to high levels of air pollution can have long-term effects on the environment, such as increased greenhouse gas emissions and reduced biodiversity. It is essential for policymakers, industries, and individuals to take steps to reduce air pollution levels in Delhi and other polluted cities worldwide to mitigate the adverse effects of air pollution on public health and the environment. This may include measures such as promoting cleaner energy sources, reducing vehicular emissions, and improving waste management practices.";
+
+    chartt(lt, info);
+  });
+
   document.querySelector("#twenty").addEventListener("click", () => {
     lt = "DELHI2020AQI";
     addFlex();
-    auto = 0
-    
+    auto = 0;
+
     let text = document.querySelector(".start-info");
     text.classList.add("hidden");
-    let aqiInfo = document.getElementById("aqiInfo")
-    const info = "The implementation of lockdown during the COVID-19 pandemic led to a significant improvement in the air quality of Delhi, with the average AQI dropping to around 181. The reduction in vehicular traffic and industrial activity played a crucial role in improving the air quality. Sustainable measures such as promoting public transportation and clean energy technologies are needed to sustain this improvement."
-    chartt(lt,info);
+    let aqiInfo = document.getElementById("aqiInfo");
+    let info =
+      "The implementation of lockdown during the COVID-19 pandemic led to a significant improvement in the air quality of Delhi, with the average AQI dropping to around 181. The reduction in vehicular traffic and industrial activity played a crucial role in improving the air quality. Sustainable measures such as promoting public transportation and clean energy technologies are needed to sustain this improvement.";
+
+    chartt(lt, info);
   });
 
   async function getAirData(lt) {
@@ -95,8 +92,7 @@ window.onload = function () {
     let rows = data.split("\n");
 
     function numberOfDays() {
-      
-      if(auto==0){
+      if (auto == 0) {
         k = prompt("Enter Number of Days");
       }
       if (k < 366 && k >= 1) {
@@ -119,12 +115,7 @@ window.onload = function () {
               ylables[index] = y[index];
             }
           }
-
-          // for (let index = 0; index < k; index++){
-          //   console.log(xlables[index])
-          // }
         });
-        // console.log(xlables.length);
       } else {
         alert("Value of days should be less than 365");
         numberOfDays();
@@ -134,15 +125,18 @@ window.onload = function () {
     numberOfDays();
   }
 
-  async function chartt(lt,k,info) {
+  async function chartt(lt, info) {
     const ctx = document.getElementById("chart").getContext("2d");
     if (barChart != null) {
       barChart.destroy();
     }
     await getAirData(lt);
-    // console.log(k)
-    if(auto=0){
-      aqiInfo.innerText = `${info}`
+    if (auto == 0) {
+      aqiInfo.innerText = `${info}`;
+      console.log(info);
+    } else if (auto == 1) {
+      aqiInfo.innerHTML =
+        '<p style="margin:16px;text-align:center;">Click to visualise the data<p>';
     }
     barChart = new Chart(ctx, {
       type: "line",
@@ -160,7 +154,7 @@ window.onload = function () {
       }),
       // Configuration options for the chart
       options: {
-        maintainAspectRatio:false,
+        maintainAspectRatio: false,
         plugins: {
           legend: {
             labels: {

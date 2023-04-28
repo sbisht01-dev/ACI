@@ -18,7 +18,7 @@
 }
 
 body {
- overflow-x: hidden;   
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -31,12 +31,6 @@ body::-webkit-scrollbar {
     background-image: url("rsrc/forest-1867975_1920.jpg");
     background-size: cover;
     border-bottom: rgb(123, 89, 4) solid 10px;
-}
-
-.front {
-    z-index: 10;
-    height: 100%;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.478), rgba(0, 0, 0, 0.911));
 }
 
 #header {
@@ -270,7 +264,7 @@ ul {
     height: 100px;
     width: 250px;
     border-radius: 5px;
-    transition: 0.3s ease-in-out ; 
+    transition: 0.3s ease-in-out;
     backdrop-filter: blur(10px);
     background-color: rgba(71, 56, 0, 0.794);
 }
@@ -297,10 +291,177 @@ ul {
 
 
 
-.hidden{
+.hidden {
     visibility: hidden;
 }
 
-.visible{
+.visible {
     visibility: visible;
+}
+
+@media (min-width:900px) {
+    .dropdownNavbar{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+@media (max-width:450px) {
+    body {
+        overflow: scroll;
+    }
+
+    .pcNavbar{
+        display: none;
+    }
+
+    .dropdownNavbar{
+        display:block;
+    }
+
+    .dropdown{
+       
+    }
+
+    .toggle-btn>i{
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        font-size: 32px;
+        margin: 16px;
+    }
+
+    #header {
+        position: fixed;
+        min-height: 50px;
+        max-height: 100%;
+        height: auto;
+        width: 100%;
+        z-index: 300;
+        display: flex;
+        flex-direction: co;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        transition: background-color 0.3s ease-in-out;
+        backdrop-filter: blur(20xp);
+    }
+
+    #header.scroll {
+        backdrop-filter: blur(50px);
+        background-color: rgba(8, 25, 7, 0.4);
+    }
+
+    nav{
+        height: auto;
+        background-color: #97DB4F;
+    }
+
+    nav ul {
+        list-style: none;
+        align-items: center;
+    }
+
+    #logo>img {
+        margin: 16px;
+        height: 60px;
+        width: auto;
+    }
+
+    ul a {
+        font-size: 0.6rem;
+        font-weight: 300;
+        text-decoration: none;
+        color: var(--Fwhite);
+        position: relative;
+        margin-left: vw;
+        padding: 0 10px;
+        padding-top: 15px;
+        transition: 0.5s ease-in-out;
+    }
+
+    ul a::after {
+        content: "";
+        position: absolute;
+        background-color: #97DB4F;
+        height: 3px;
+        width: 0;
+        transition: 0.3s ease-in-out;
+    }
+
+    ul a:hover::after {
+        content: "";
+        position: absolute;
+        background-color: #97DB4F;
+        height: 3px;
+        width: 100%;
+        left: 0;
+        transition: 0.3s ease-in-out;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #home {
+        color: #97DB4F;
+    }
+
+    .contact>a>button {
+        font-size: 1rem;
+        font-weight: 800;
+        color: #97DB4F;
+        position: relative;
+        z-index: 300;
+        width: 150px;
+        height: 35px;
+        top: 10px;
+        border: solid 1px;
+        border-radius: 50px;
+        transition: 0.3s ease-in-out;
+        background-color: rgba(255, 255, 255, 0);
+        border-color: #97DB4F;
+    }
+
+    .contact>a>button:hover {
+        color: white;
+        border: solid 3px;
+        border-style: double;
+        background-image: none;
+        transition: 0.3s ease-in-out;
+    }
+
+    .flashcards {
+        z-index: 200;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .card{
+        width: 80%;
+        height: 150px;
+    }
+
+    .card span{
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .card p{
+        font-size: 1rem;
+        font-weight: 300;
+    }
 }
