@@ -38,18 +38,28 @@ window.onload = function () {
   }
   front();
 
+ 
   function fetchAQI() {
     fetch('https://api.waqi.info/feed/ghaziabad/?token=1787d4e7ba4eb264b0e47eb236fabf1b899f71ea')
     .then(response => response.json())
     .then(data => {
-      console.log(data.data.aqi)
- 
+      document.getElementById("aqiBtn").innerHTML = data.data.aqi
     })    
     .catch((err)=>{
         console.log(err,Error)
     })
   }
-  fetchAQI();
+  
+
+
+  document.querySelector("#aqiBtn").addEventListener("mouseover", () => {
+    fetchAQI()
+  })
+  document.querySelector("#aqiBtn").addEventListener("mouseleave", () => {
+    document.getElementById("aqiBtn").innerHTML = "Live AQI"
+
+  })
+
 
   let cta = document.querySelector(".CTA");
   cta.addEventListener("mouseenter", () => {
