@@ -13,79 +13,40 @@
     <link rel="stylesheet" href="home.css">
     <link rel="shortcut icon" href="./rsrc/lightlogo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="aqi.js"></script>
-    <script src="script.js"></script>
     <title>ACI</title>
 </head>
 
 <body>
     <div class="primary-container">
-        <div class="pcNavbar">
 
-            <header id="header">
-                <div id="logo"> <img src="rsrc/newlogo.png"> </div>
-                <nav class="navigation-link">
-                    <ul>
-                        <a class="links" id="home" href="index.html">
-                            <li>HOME</li>
-                        </a>
-                        <a class="links" id="what" href="os.html">
-                            <li> OUR SERVICES</li>
-                        </a>
-                        <a class="links" id="read" href="read.html">
-                            <li>Read</li>
-                        </a>
-                        <a class="links" id="about" href="gov.html">
-                            <li>Government Support</li>
-                        </a>
-                    </ul>
-                </nav>
-
-                <div class="contact">
-                    <a href="">
-                        <button>CONTACT US</button>
+        <header id="header">
+            <div id="logo"> <img src="rsrc/newlogo.png"> </div>
+            <nav class="navigation-link">
+                <ul>
+                    <a class="links" id="home" href="index.html">
+                        <li>HOME</li>
                     </a>
-                </div>
+                    <a class="links" id="what" href="os.html">
+                        <li> OUR SERVICES</li>
+                    </a>
+                    <a class="links" id="read" href="read.html">
+                        <li>Read</li>
+                    </a>
+                    <a class="links" id="about" href="gov.html">
+                        <li>GOVERNMENT SUPPORT</li>
+                    </a>
+                </ul>
+            </nav>
 
-            </header>
+            <div class="contact">
+                <button id="aqiBtn">Live AQI</button>
+            </div>
 
-        </div>
-
-
-
-        <div class="dropdownNavbar">
-
-            <header id="header">
-                <div id="logo"> <img src="rsrc/newlogo.png"> </div>
-                <nav class="navigation-link dropdown">
-                    <ul class=" dropdown">
-                        <a class="links" id="home" href="index.html">
-                            <li>HOME</li>
-                        </a>
-                        <a class="links" id="what" href="os.html">
-                            <li> OUR SERVICES</li>
-                        </a>
-                        <a class="links" id="get" href="ge.html">
-                            <li>GET ENVOLVED</li>
-                        </a>
-                        <a class="links" id="about" href="about.html">
-                            <li>Gov Support</li>
-                        </a>
-                    </ul>
-                    <div class="contact dropdown">
-                        <a href="">
-                            <button>CONTACT US</button>
-                        </a>
-                    </div>
-                </nav>
-
-                <div class="toggle-btn">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-
-            </header>
+        </header>
+        <div id="liveAqiInfo">
 
         </div>
+
         <!--********************************************************************************************************************-->
         <div class="hero-section">
             <div class="section">
@@ -133,6 +94,8 @@
         <!--********************************************************************************************************************-->
 
     </div>
+    <!-- <script src="liveaqi.js"></script>  -->
+    <script src="script.js"></script>
 
 
 </body>

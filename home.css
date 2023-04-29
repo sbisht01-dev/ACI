@@ -30,7 +30,6 @@ body::-webkit-scrollbar {
     width: auto;
     background-image: url("rsrc/forest-1867975_1920.jpg");
     background-size: cover;
-    border-bottom: rgb(123, 89, 4) solid 10px;
 }
 
 #header {
@@ -111,7 +110,7 @@ ul {
     color: #97DB4F;
 }
 
-.contact>a>button {
+.contact>button {
     font-size: 1rem;
     font-weight: 800;
     color: #97DB4F;
@@ -127,12 +126,18 @@ ul {
     border-color: #97DB4F;
 }
 
-.contact>a>button:hover {
+.contact>button:hover {
     color: white;
     border: solid 3px;
     border-style: double;
     background-image: none;
     transition: 0.3s ease-in-out;
+}
+
+.liveAqiInfo{
+    height: 300px;
+    width: 200px;
+    background-color: #97DB4F;
 }
 
 .second-container {
@@ -324,9 +329,7 @@ ul {
         display:block;
     }
 
-    .dropdown{
-       
-    }
+  
 
     .toggle-btn>i{
         color: rgb(0, 0, 0);

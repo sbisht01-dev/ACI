@@ -1,4 +1,3 @@
-console.log("hi");
 window.onload = function () {
   let token = "1787d4e7ba4eb264b0e47eb236fabf1b899f71ea";
   let URL = "https://api.waqi.info/feed/here/?token=";
@@ -12,6 +11,10 @@ window.onload = function () {
   let yV = [];
   let k = 10;
   let auto = 1;
+
+
+
+
 
   chartt(lt);
   var navbar = document.getElementById("header"); // Get the navbar element
