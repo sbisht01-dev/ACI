@@ -116,7 +116,7 @@ ul {
     color: #97DB4F;
     position: relative;
     z-index: 300;
-    width: 150px;
+    width: 220px;
     height: 35px;
     top: 10px;
     border: solid 1px;
@@ -136,7 +136,7 @@ ul {
 
 .liveAqiInfo{
     height: 300px;
-    width: 200px;
+    width: 20px;
     background-color: #97DB4F;
 }
 
