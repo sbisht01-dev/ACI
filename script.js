@@ -43,7 +43,7 @@ window.onload = function () {
     fetch('https://api.waqi.info/feed/delhi/?token=1787d4e7ba4eb264b0e47eb236fabf1b899f71ea')
     .then(response => response.json())
     .then(data => {
-      document.getElementById("aqiBtn").innerHTML = data.data.aqi
+      document.getElementById("aqiBtn").innerHTML = `Live Aqi (Delhi): ${data.data.aqi}`
     })    
     .catch((err)=>{
         console.log(err,Error)
@@ -56,7 +56,7 @@ window.onload = function () {
     fetchAQI()  
   })
   document.querySelector("#aqiBtn").addEventListener("mouseleave", () => {
-    document.getElementById("aqiBtn").innerHTML = "Live AQI"
+    document.getElementById("aqiBtn").innerHTML = "Predicted AQI (Delhi) : 80"
 
   })
 
