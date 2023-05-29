@@ -40,7 +40,7 @@ window.onload = function () {
 
  
   function fetchAQI() {
-    fetch('https://api.waqi.info/feed/ghaziabad/?token=1787d4e7ba4eb264b0e47eb236fabf1b899f71ea')
+    fetch('https://api.waqi.info/feed/delhi/?token=1787d4e7ba4eb264b0e47eb236fabf1b899f71ea')
     .then(response => response.json())
     .then(data => {
       document.getElementById("aqiBtn").innerHTML = data.data.aqi
@@ -53,7 +53,7 @@ window.onload = function () {
 
 
   document.querySelector("#aqiBtn").addEventListener("mouseover", () => {
-    fetchAQI()
+    fetchAQI()  
   })
   document.querySelector("#aqiBtn").addEventListener("mouseleave", () => {
     document.getElementById("aqiBtn").innerHTML = "Live AQI"

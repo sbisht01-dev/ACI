@@ -1,10 +1,8 @@
-
-
 window.onload = () => {
   let token = "1787d4e7ba4eb264b0e47eb236fabf1b899f71ea";
   let URL = "https://api.waqi.info/feed/ghaziabad/?";
   let aqiBtn = document.getElementById("aqiBtn");
-  let aqi = null
+  let aqi = null;
   aqiBtn.addEventListener("mouseover", () => {
     console.log("AQI btn working");
   });
@@ -36,20 +34,20 @@ window.onload = () => {
   //   navItem.addEventListener("mouseout", () => {
   //     hoverDiv.style.display = "none";
   //   });
-  console.log("hello")
+  console.log("hello");
 
   function fetchAQI(URL, token) {
-    fetch('https://api.waqi.info/feed/ghaziabad/?token=1787d4e7ba4eb264b0e47eb236fabf1b899f71ea')
-    .then(response => response.json())
-    .then(data => {
-      console.log(data.data.aqi)
- 
-    })    
-    .catch((err)=>{
-        console.log(err,Error)
-    })
+    fetch(
+      "https://api.waqi.info/feed/ghaziabad/?token=1787d4e7ba4eb264b0e47eb236fabf1b899f71ea"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.data.aqi);
+      })
+      .catch((err) => {
+        console.log(err, Error);
+      });
   }
-  
+
   fetchAQI(URL, token);
 };
-

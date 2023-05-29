@@ -12,10 +12,6 @@ window.onload = function () {
   let k = 10;
   let auto = 1;
 
-
-
-
-
   chartt(lt);
   var navbar = document.getElementById("header"); // Get the navbar element
   var triggerHeight = 50; // Height at which the color change will be triggered
@@ -136,7 +132,7 @@ window.onload = function () {
     await getAirData(lt);
     if (auto == 0) {
       aqiInfo.innerText = `${info}`;
-      console.log(info);
+      // console.log(info);
     } else if (auto == 1) {
       aqiInfo.innerHTML =
         '<p style="margin:16px;text-align:center;">Click to visualise the data<p>';
