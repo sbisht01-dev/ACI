@@ -1,5 +1,5 @@
 // let trainingData
-// console.log(`Predicted AQI: ${finalResult}`);
+console.log(`Predicted AQI: sult ` );
 setTimeout(() => {
   fetch("./CSV/DELHIAQI.csv")
     .then((response) => response.text())
@@ -12,9 +12,10 @@ setTimeout(() => {
 
       // iterate over each line
       for (let i = 0; i < lines.length; i++) {
+      console.log("loop")
+
         // split the line into individual values
         const values = lines[i].split(",");
-
         // extract the date and AQI values
         const date = values[1].split("-");
         const month = parseFloat(parseInt(date[1]) / 11).toFixed(2);
@@ -23,7 +24,9 @@ setTimeout(() => {
         // add the values to the output array
         output.push([month, day, aqi]);
         // console.log(output)
+
       }
+
       const trainData = output.map((arr) => ({
         input: { date: parseFloat(arr[0]), month: parseFloat(arr[1]) },
         output: { AQI: parseFloat(arr[2]) },
@@ -66,9 +69,10 @@ setTimeout(() => {
 
       const manualResult = scaleOutput(net.run(manual).AQI, minAQI, maxAQI);
 
-      console.log(manualResult);
+      console.log(manualResult); 
+
     });
-}, 5000);
+}, 1000);
 
 // Good (0-50)
 
